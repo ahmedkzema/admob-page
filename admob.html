@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎬 شاهد إعلان واربح نقاط</title>
+<style>
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0fff0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    background: #4CAF50;
+    color: white;
+    margin: 0;
+    padding: 15px;
+  }
+  #ad-box {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    height: 300px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<h1>🎥 شاهد إعلان واربح نقاط</h1>
+<p>اضغط على الزر أدناه لمشاهدة إعلان AdMob وكسب النقاط!</p>
+
+<div id="ad-box">
+  <p>سيظهر الإعلان هنا 👇</p>
+</div>
+
+<button onclick="loadAd()">🎬 عرض الإعلان</button>
+
+<!-- كود إعلان AdSense / AdMob Web -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>
+function loadAd() {
+  document.getElementById('ad-box').innerHTML = `
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-app-pub-4737878238299075"
+         data-ad-slot="2231290518"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  `;
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  alert("📺 الإعلان قيد التحميل... تأكد من الاتصال بالإنترنت");
+}
+</script>
+
+</body>
+</html>
